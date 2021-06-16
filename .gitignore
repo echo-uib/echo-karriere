@@ -29,9 +29,7 @@ build/
 # Firebase
 .firebase
 
-public/
-.netlify/
-.cache/
+.next/
 .env*
 .vscode/
 schema.graphql

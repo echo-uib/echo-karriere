@@ -10,6 +10,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "prettier",
+    "next",
   ],
   settings: {
     react: {
@@ -38,6 +39,14 @@ module.exports = {
     "simple-import-sort/exports": "error",
     "sort-imports": "off",
     "import/order": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["hrefLeft", "hrefRight"],
+        aspects: ["invalidHref", "preferButton"],
+      },
+    ],
   },
   overrides: [
     // Override some TypeScript rules just for .js files
@@ -45,6 +54,12 @@ module.exports = {
       files: ["*.js"],
       rules: {
         "@typescript-eslint/no-var-requires": "off", //
+      },
+    },
+    {
+      files: ["pages/**/*.{ts,tsx}"],
+      rules: {
+        "import/no-default-export": "off",
       },
     },
   ],

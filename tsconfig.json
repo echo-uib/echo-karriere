@@ -1,23 +1,34 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "sourceMap": true,
-    "esModuleInterop": true,
+    "allowJs": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictPropertyInitialization": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "target": "esnext",
+    "paths": {
+      "@/components": ["./components"],
+      "@/data": ["./data"],
+      "@/icons": ["./components/assets/icons"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils": ["./utils"]
+    },
   },
-  "include": ["src/**/*"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
 }
